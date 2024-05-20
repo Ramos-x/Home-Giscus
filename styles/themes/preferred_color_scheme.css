@@ -210,14 +210,24 @@ main .gsc-loading-image {
   border-start-end-radius: 8px!important;
   border-start-start-radius: 8px!important;
 }
+.gsc-comment-box-textarea {
+  border-radius: 8px 8px 0 0;
+}
+.gsc-comment-box-textarea-extras {
+  border-radius: 0 0 8px 8px ;
+}
+#__next :is(.text-sm) {
+  display: none;
+}
 #__next :is(.py-2) {
   border-start-end-radius: 8px !important;
   border-start-start-radius: 8px !important;
 }
-.gsc-comment-box-textarea {
+#__next :is(.rounded-md) {
   border-radius: 8px;
+  transition: .35s cubic-bezier(0,.5,.5,1);
 }
-.gsc-comment-box-textarea-extras {
-  border-end-end-radius: 8px;
-  border-end-start-radius: 8px;
+#__next :is(.rounded-md):hover {
+  box-shadow: 0 0 7px 1px #7777;
+  transform: scale(1.02);
 }
