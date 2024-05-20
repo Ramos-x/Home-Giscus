@@ -3,7 +3,7 @@
 利用 [GitHub Discussions][discussions] 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论和反应吧！本项目深受 [utterances][utterances] 的启发。
 
 - [开源][repo]。🌏
-- 无跟踪，无广告，永久免费。📡 
+- 无跟踪，无广告，永久免费。📡 🚫
 - 无需数据库。所有数据均储存在 GitHub Discussions 中。:octocat:
 - 支持[自定义主题][creating-custom-themes]！🌗
 - 支持[多种语言][multiple-languages]。🌐
