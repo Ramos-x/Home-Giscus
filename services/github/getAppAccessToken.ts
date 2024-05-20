@@ -24,7 +24,7 @@ function getHeaders() {
 async function getInstallationId(repoWithOwner: string): Promise<number> {
   const { id } = await fetch(GITHUB_REPO_INSTALLATION_URL(repoWithOwner), {
     headers: getHeaders(),
-  }).then((response) => response.json()).then((data) => {console.log(data); return data;});
+  }).then((response) => response.json());
   return id;
 }
 
