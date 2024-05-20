@@ -223,11 +223,11 @@ main .gsc-loading-image {
   border-start-end-radius: 8px !important;
   border-start-start-radius: 8px !important;
 }
-#__next :is(.rounded-md) {
+.btn-primary {
   border-radius: 8px;
   transition: .35s cubic-bezier(0,.5,.5,1);
 }
-#__next :is(.rounded-md):hover {
+.btn-primary:hover {
   box-shadow: 0 0 7px 1px #7777;
   transform: scale(1.02);
 }
