@@ -608,6 +608,7 @@ img.emoji {
 .gsc-toolbar-item {
   @apply p-1;
 
+  padding: 0;
   color: var(--color-fg-muted, var(--color-text-secondary));
 }
 
@@ -650,6 +651,7 @@ img.emoji {
 
 .gsc-comment-box-textarea-extras {
   @apply flex justify-end px-2.5 py-[7px] border border-t-0 rounded-b;
+  align-items: flex-end;
 }
 
 .gsc-comment-box-bottom {
@@ -661,7 +663,7 @@ img.emoji {
 .gsc-comment-box-markdown-hint {
   @apply text-xs hover:no-underline;
 
-  padding-left: .35rem;
+  padding-left: .5rem;
 }
 
 .gsc-comment-box-buttons {

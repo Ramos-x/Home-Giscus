@@ -155,22 +155,6 @@ export default function CommentBox({
             {t('preview')}
           </button>
         </div>
-        {!isPreview ? (
-          <div className="gsc-comment-box-md-toolbar">
-            <button
-              className="gsc-toolbar-item"
-              type="button"
-              title={isFixedWidth ? t('disableFixedWidth') : t('enableFixedWidth')}
-              onClick={() => {
-                setIsFixedWidth(!isFixedWidth);
-                textarea.current.focus();
-              }}
-              tabIndex={-1}
-            >
-              <TypographyIcon />
-            </button>
-          </div>
-        ) : null}
         <div className="gsc-comment-box-bottom">
           {token && !isReply ? (
             <button type="button" className="link-secondary text-sm" onClick={onSignOut}>
@@ -238,6 +222,20 @@ export default function CommentBox({
               }
             ></textarea>
             <div className="form-control input-contrast gsc-comment-box-textarea-extras">
+              {!isPreview ? (
+                <button
+                  className="gsc-toolbar-item"
+                  type="button"
+                  title={isFixedWidth ? t('disableFixedWidth') : t('enableFixedWidth')}
+                  onClick={() => {
+                    setIsFixedWidth(!isFixedWidth);
+                    textarea.current.focus();
+                  }}
+                  tabIndex={-1}
+                >
+                  <TypographyIcon />
+                </button>
+              ) : null}
               <a
                 className="link-secondary gsc-comment-box-markdown-hint flex gap-2"
                 rel="nofollow noopener noreferrer"
