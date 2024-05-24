@@ -576,6 +576,8 @@ img.emoji {
 
 .gsc-comment-footer, .gsc-reply-footer {
   @apply flex content-center justify-between mb-3 gap-2;
+  margin-bottom: 0;
+  padding-bottom: .75rem;
 }
 
 .gsc-comment-footer{
@@ -632,6 +634,10 @@ img.emoji {
 
 .gsc-comment-box-main {
   @apply m-2;
+  margin: 0;
+  padding: .5rem;
+  border-radius: 18px;
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 
 .gsc-comment-box-preview {
@@ -686,7 +692,7 @@ img.emoji {
 
 .gsc-reply-box {
   @apply flex px-4 py-2 border-t rounded-b-md;
-  border-radius: 18px !important;
+  border-radius: 0 0 18px 18px !important;
 }
 
 .gsc-social-reaction-summary-item {

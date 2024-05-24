@@ -254,6 +254,7 @@ export default function CommentBox({
     <div className="color-bg-tertiary gsc-reply-box">
       <button
         className="form-control color-text-secondary color-border-primary w-full cursor-text rounded border px-2 py-1 text-left focus:border-transparent"
+        style="border-radius: 8px;"
         onClick={handleReplyOpen}
         type="button"
       >
