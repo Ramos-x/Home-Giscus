@@ -155,7 +155,6 @@ export default function CommentBox({
             {t('preview')}
           </button>
         </div>
-
         {!isPreview ? (
           <div className="gsc-comment-box-md-toolbar">
             <button
@@ -172,7 +171,6 @@ export default function CommentBox({
             </button>
           </div>
         ) : null}
-
         <div className="gsc-comment-box-bottom">
           {token && !isReply ? (
             <button type="button" className="link-secondary text-sm" onClick={onSignOut}>
@@ -209,7 +207,6 @@ export default function CommentBox({
             )}
           </div>
         </div>
-
       </div>
       <div className="gsc-comment-box-main">
         {isPreview ? (

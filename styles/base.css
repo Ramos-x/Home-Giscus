@@ -414,7 +414,7 @@ details summary {
 
 .ClipboardButton:focus,
 .snippet-clipboard-content:hover .ClipboardButton,
-.highlight:hover .ClipboardButton, {
+.highlight:hover .ClipboardButton {
   @apply opacity-100;
 
   animation: fade-in 0.2s both;
@@ -654,11 +654,14 @@ img.emoji {
 
 .gsc-comment-box-bottom {
   @apply flex items-center m-2;
+
   margin: .5rem .5rem .5rem auto;
 }
 
 .gsc-comment-box-markdown-hint {
   @apply text-xs hover:no-underline;
+
+  padding-left: .35rem;
 }
 
 .gsc-comment-box-buttons {
