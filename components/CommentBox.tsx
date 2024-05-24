@@ -251,7 +251,6 @@ export default function CommentBox({
           </div>
         )}
       </div>
-
     </form>
   ) : (
     <div className="color-bg-tertiary gsc-reply-box">
