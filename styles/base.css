@@ -588,10 +588,13 @@ img.emoji {
 
 .gsc-comment-box {
   @apply w-full text-sm;
+  
+  border-radius: 18px !important;
 }
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply) {
   @apply border rounded;
+  
   border-radius: 18px!important
 }
 
@@ -675,6 +678,7 @@ img.emoji {
 
 .gsc-reply-box {
   @apply flex px-4 py-2 border-t rounded-b-md;
+  border-radius: 18px !important;
 }
 
 .gsc-social-reaction-summary-item {
