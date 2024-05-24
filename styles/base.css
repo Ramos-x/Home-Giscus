@@ -77,6 +77,10 @@ details summary {
   color: var(--color-fg-muted, var(--color-text-secondary));
 }
 
+.color-text-secondary{
+  border-radius: 10px !important;
+}
+
 .color-fg-subtle {
   color: var(--color-fg-subtle, var(--color-diff-blob-num-text));
 }
