@@ -38,6 +38,7 @@ details summary {
 .color-bg-primary,
 .color-bg-default {
   background-color: var(--color-canvas-default, var(--color-bg-primary));
+  border-radius: 18px !important;
 }
 
 .color-bg-secondary,
@@ -598,6 +599,7 @@ img.emoji {
 
 .gsc-replies {
   @apply pt-2 border-t rounded-b-md;
+  border-radius: 0 0 18px 18px !important;
 }
 
 .gsc-comment-box {
