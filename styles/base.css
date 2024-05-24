@@ -654,6 +654,7 @@ img.emoji {
 
 .gsc-comment-box-bottom {
   @apply flex items-center m-2;
+  margin: .5rem .5rem .5rem auto;
 }
 
 .gsc-comment-box-markdown-hint {

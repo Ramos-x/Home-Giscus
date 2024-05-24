@@ -172,6 +172,44 @@ export default function CommentBox({
             </button>
           </div>
         ) : null}
+
+        <div className="gsc-comment-box-bottom">
+          {token && !isReply ? (
+            <button type="button" className="link-secondary text-sm" onClick={onSignOut}>
+              <SignOutIcon className="mr-2" />
+              {t('signOut')}
+            </button>
+          ) : null}
+          <div className="gsc-comment-box-buttons">
+            {isReply ? (
+              <button
+                className="btn ml-1 rounded-md border"
+                onClick={() => setIsReplyOpen(false)}
+                type="button"
+              >
+                {t('cancel')}
+              </button>
+            ) : null}
+            {token ? (
+              <button
+                className="btn btn-primary items-center ml-1 rounded-md border"
+                type="submit"
+                disabled={(token && !input.trim()) || isSubmitting}
+              >
+                {isReply ? t('reply') : t('comment')}
+              </button>
+            ) : (
+              <a
+                className="btn btn-primary inline-flex items-center ml-1 rounded-md border hover:no-underline"
+                target="_top"
+                href={loginUrl}
+              >
+                <MarkGithubIcon className="mr-2" fill="currentColor" /> {t('signInWithGitHub')}
+              </a>
+            )}
+          </div>
+        </div>
+
       </div>
       <div className="gsc-comment-box-main">
         {isPreview ? (
@@ -216,42 +254,7 @@ export default function CommentBox({
           </div>
         )}
       </div>
-      <div className="gsc-comment-box-bottom">
-        {token && !isReply ? (
-          <button type="button" className="link-secondary text-sm" onClick={onSignOut}>
-            <SignOutIcon className="mr-2" />
-            {t('signOut')}
-          </button>
-        ) : null}
-        <div className="gsc-comment-box-buttons">
-          {isReply ? (
-            <button
-              className="btn ml-1 rounded-md border"
-              onClick={() => setIsReplyOpen(false)}
-              type="button"
-            >
-              {t('cancel')}
-            </button>
-          ) : null}
-          {token ? (
-            <button
-              className="btn btn-primary items-center ml-1 rounded-md border"
-              type="submit"
-              disabled={(token && !input.trim()) || isSubmitting}
-            >
-              {isReply ? t('reply') : t('comment')}
-            </button>
-          ) : (
-            <a
-              className="btn btn-primary inline-flex items-center ml-1 rounded-md border hover:no-underline"
-              target="_top"
-              href={loginUrl}
-            >
-              <MarkGithubIcon className="mr-2" fill="currentColor" /> {t('signInWithGitHub')}
-            </a>
-          )}
-        </div>
-      </div>
+
     </form>
   ) : (
     <div className="color-bg-tertiary gsc-reply-box">
