@@ -152,6 +152,7 @@ details summary {
 .color-box-border-info {
   border-color: var(--color-accent-muted, var(--color-box-border-info));
   border-radius: 18px !important;
+  background-color: var(--color-canvas-inset, var(--color-bg-canvas-inset));
 }
 
 .btn {
@@ -552,6 +553,8 @@ img.emoji {
 
 .gsc-comment-header {
   @apply flex items-center px-4 pt-2 gap-2;
+  border-radius: 18px 18px 0 0;
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 
 .gsc-comment-author {
@@ -564,6 +567,7 @@ img.emoji {
 
 .gsc-comment-content {
   @apply p-4 rounded-t;
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 
 .gsc-comment-content.minimized {
@@ -572,6 +576,10 @@ img.emoji {
 
 .gsc-comment-footer, .gsc-reply-footer {
   @apply flex content-center justify-between mb-3 gap-2;
+}
+
+.gsc-comment-footer{
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 
 .gsc-comment-reactions {
@@ -594,7 +602,7 @@ img.emoji {
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply) {
   @apply border rounded;
-  
+
   border-radius: 18px!important
 }
 
