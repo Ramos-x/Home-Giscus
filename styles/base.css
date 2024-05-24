@@ -642,6 +642,7 @@ img.emoji {
 
 .gsc-comment-box-preview {
   @apply px-2 pt-2 pb-4 min-h-[131px] border-b-2;
+  border-bottom-width: 0;
 }
 
 .gsc-comment-box-write {
