@@ -204,17 +204,16 @@ main .gsc-loading-image {
 
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply) {
-  border-radius: 8px!important;
 }
 .gsc-comment-box-tabs {
-  border-start-end-radius: 8px!important;
-  border-start-start-radius: 8px!important;
+  border-start-end-radius: 18px!important;
+  border-start-start-radius: 18px!important;
 }
 .gsc-comment-box-textarea {
-  border-radius: 8px 8px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 .gsc-comment-box-textarea-extras {
-  border-radius: 0 0 8px 8px ;
+  border-radius: 0 0 12px 12px ;
 }
 #__next :is(.text-sm) {
   display: none;

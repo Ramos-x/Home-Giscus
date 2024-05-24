@@ -151,6 +151,7 @@ details summary {
 
 .color-box-border-info {
   border-color: var(--color-accent-muted, var(--color-box-border-info));
+  border-radius: 18px !important;
 }
 
 .btn {
@@ -591,6 +592,7 @@ img.emoji {
 
 .gsc-comment-box:not(.gsc-comment-box-is-reply) {
   @apply border rounded;
+  border-radius: 18px!important
 }
 
 .gsc-comment-box-tabs {
@@ -627,6 +629,7 @@ img.emoji {
 
 .gsc-comment-box-write {
   @apply rounded;
+  border-radius: 12px !important;
 }
 
 .gsc-comment-box-write:focus-within {
