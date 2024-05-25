@@ -213,6 +213,7 @@ export default function CommentBox({
                 isFixedWidth ? 'gsc-is-fixed-width' : ''
               }`}
               placeholder={token ? placeHolderText : t('signInToComment')}
+              name={'comment'}
               onChange={handleTextAreaChange}
               value={input}
               disabled={!token || isSubmitting}
