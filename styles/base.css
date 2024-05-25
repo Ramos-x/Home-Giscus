@@ -616,6 +616,7 @@ img.emoji {
 
 .gsc-comment-box-tabs {
   @apply flex items-center justify-between border-b rounded-t;
+  align-items: flex-end;
 }
 
 .gsc-comment .gsc-comment-box-tabs {
@@ -685,7 +686,7 @@ img.emoji {
 .gsc-comment-box-bottom {
   @apply flex items-center m-2;
 
-  margin: .5rem .5rem .5rem auto;
+  margin: .4rem .5rem .4rem auto;
 }
 
 .gsc-comment-box-markdown-hint {
