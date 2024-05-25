@@ -644,6 +644,7 @@ img.emoji {
   padding: .5rem;
   border-radius: 18px;
   background-color: var(--color-canvas-default, var(--color-bg-primary));
+  min-height: 151px;
 }
 
 .gsc-comment-box-preview {
