@@ -213,10 +213,12 @@ main .gsc-loading-image {
 .gsc-comment-box-textarea {
   border-radius: 12px 12px 0 0;
   border-color: var(--color-border-default);
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 .gsc-comment-box-textarea-extras {
   border-radius: 0 0 12px 12px ;
   border-color: var(--color-border-default);
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 #__next :is(.text-sm) {
   display: none;

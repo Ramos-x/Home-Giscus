@@ -35,6 +35,10 @@ details summary {
   }
 }
 
+.body {
+  font-family: 'LXGW WENKAI';
+}
+
 .color-bg-primary,
 .color-bg-default {
   background-color: var(--color-canvas-default, var(--color-bg-primary));
@@ -645,7 +649,7 @@ img.emoji {
   padding: .5rem;
   border-radius: 18px;
   background-color: var(--color-canvas-default, var(--color-bg-primary));
-  min-height: 151px;
+  min-height: 155px;
 }
 
 .gsc-comment-box-preview {
@@ -670,6 +674,9 @@ img.emoji {
   border-bottom-style: dashed;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-radius: 12px 12px 0 0;
+  border-color: var(--color-border-default);
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 
 .gsc-comment-box-textarea:focus {
@@ -680,7 +687,10 @@ img.emoji {
 
 .gsc-comment-box-textarea-extras {
   @apply flex justify-end px-2.5 py-[7px] border border-t-0 rounded-b;
-  align-items: flex-end;
+  align-items: center;
+  border-radius: 0 0 12px 12px ;
+  border-color: var(--color-border-default);
+  background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
 
 .gsc-comment-box-bottom {
