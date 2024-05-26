@@ -535,6 +535,7 @@ img.emoji {
 
 .gsc-comments {
   @apply flex flex-col gap-6;
+  gap: 1rem!important;
 }
 
 .gsc-header {
