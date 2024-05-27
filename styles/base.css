@@ -523,6 +523,7 @@ img.emoji {
 
 .gsc-main {
   @apply w-full flex flex-col gap-8;
+  font-family: "LXGW WENKAI" !important;
 }
 
 .gsc-reactions {
