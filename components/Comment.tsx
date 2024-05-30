@@ -71,6 +71,7 @@ export default function Comment({
 
   return (
     <div className="gsc-comment">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.min.css" />
       <div
         className={`color-bg-primary w-full min-w-0 rounded-md border ${
           comment.viewerDidAuthor ? 'color-box-border-info' : 'color-border-primary'
