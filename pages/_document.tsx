@@ -38,6 +38,7 @@ class CustomDocument extends Document {
           <meta name="color-scheme" content="light dark" />
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="stylesheet" href={themeUrl} crossOrigin="anonymous" id="giscus-theme" />
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.min.css" />
         </Head>
         <body>
           <Main />
