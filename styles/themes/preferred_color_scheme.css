@@ -235,3 +235,11 @@ main .gsc-loading-image {
   box-shadow: 0 0 7px 1px #7777;
   transform: scale(1.02);
 }
+::-webkit-scrollbar {
+  width:12px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(214, 214, 214);
+  border: 3px solid var(--color-canvas-default,var(--color-bg-primary));
+  border-radius: 10px
+}

@@ -1066,3 +1066,13 @@ img.emoji {
   text-decoration: underline;
   color: var(--color-prettylights-syntax-constant-other-reference-link);
 }
+
+::-webkit-scrollbar {
+  width:12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(214, 214, 214);
+  border: 3px solid var(--color-canvas-default,var(--color-bg-primary));
+  border-radius: 10px
+}
