@@ -159,7 +159,7 @@ details summary {
 }
 
 .color-box-border-info {
-  border-color: var(--color-accent-muted, var(--color-box-border-info));
+  /* border-color: var(--color-accent-muted, var(--color-box-border-info)); */
   border-radius: 18px !important;
   background-color: var(--color-canvas-inset, var(--color-bg-canvas-inset));
 }
