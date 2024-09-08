@@ -84,6 +84,9 @@ export function normalizeRepoName(repoOrLink: string) {
 
 export function resizeTextArea(textarea: HTMLTextAreaElement) {
   const maxHeight = 270;
+  const width = '-moz-available';
+  textarea.style.width = width;
+  textarea.style.border = 'none';
   textarea.style.height = `0px`;
   const height = textarea.scrollHeight <= maxHeight ? textarea.scrollHeight : maxHeight;
   textarea.style.height = `${height}px`;
