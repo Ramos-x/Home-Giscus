@@ -155,42 +155,23 @@ export default function CommentBox({
             {t('preview')}
           </button>
         </div>
-        <div className="gsc-comment-box-bottom">
-          {token && !isReply ? (
-            <button type="button" className="link-secondary text-sm" onClick={onSignOut}>
-              <SignOutIcon className="mr-2" />
-              {t('signOut')}
+
+        {!isPreview ? (
+          <div className="gsc-comment-box-md-toolbar">
+            <button
+              className="gsc-toolbar-item"
+              type="button"
+              title={isFixedWidth ? t('disableFixedWidth') : t('enableFixedWidth')}
+              onClick={() => {
+                setIsFixedWidth(!isFixedWidth);
+                textarea.current.focus();
+              }}
+              tabIndex={-1}
+            >
+              <TypographyIcon />
             </button>
-          ) : null}
-          <div className="gsc-comment-box-buttons">
-            {isReply ? (
-              <button
-                className="btn ml-1 rounded-md border"
-                onClick={() => setIsReplyOpen(false)}
-                type="button"
-              >
-                {t('cancel')}
-              </button>
-            ) : null}
-            {token ? (
-              <button
-                className="btn btn-primary items-center ml-1 rounded-md border"
-                type="submit"
-                disabled={(token && !input.trim()) || isSubmitting}
-              >
-                {isReply ? t('reply') : t('comment')}
-              </button>
-            ) : (
-              <a
-                className="btn btn-primary inline-flex items-center ml-1 rounded-md border hover:no-underline"
-                target="_top"
-                href={loginUrl}
-              >
-                <MarkGithubIcon className="mr-2" fill="currentColor" /> {t('signInWithGitHub')}
-              </a>
-            )}
           </div>
-        </div>
+        ) : null}
       </div>
       <div className="gsc-comment-box-main">
         {isPreview ? (
@@ -213,7 +194,6 @@ export default function CommentBox({
                 isFixedWidth ? 'gsc-is-fixed-width' : ''
               }`}
               placeholder={token ? placeHolderText : t('signInToComment')}
-              name={'comment'}
               onChange={handleTextAreaChange}
               value={input}
               disabled={!token || isSubmitting}
@@ -223,20 +203,6 @@ export default function CommentBox({
               }
             ></textarea>
             <div className="form-control input-contrast gsc-comment-box-textarea-extras">
-              {!isPreview ? (
-                <button
-                  className="gsc-toolbar-item"
-                  type="button"
-                  title={isFixedWidth ? t('disableFixedWidth') : t('enableFixedWidth')}
-                  onClick={() => {
-                    setIsFixedWidth(!isFixedWidth);
-                    textarea.current.focus();
-                  }}
-                  tabIndex={-1}
-                >
-                  <TypographyIcon />
-                </button>
-              ) : null}
               <a
                 className="link-secondary gsc-comment-box-markdown-hint flex gap-2"
                 rel="nofollow noopener noreferrer"
@@ -249,6 +215,42 @@ export default function CommentBox({
             </div>
           </div>
         )}
+      </div>
+      <div className="gsc-comment-box-bottom">
+        {token && !isReply ? (
+          <button type="button" className="link-secondary text-sm" onClick={onSignOut}>
+            <SignOutIcon className="mr-2" />
+            {t('signOut')}
+          </button>
+        ) : null}
+        <div className="gsc-comment-box-buttons">
+          {isReply ? (
+            <button
+              className="btn ml-1 rounded-md border"
+              onClick={() => setIsReplyOpen(false)}
+              type="button"
+            >
+              {t('cancel')}
+            </button>
+          ) : null}
+          {token ? (
+            <button
+              className="btn btn-primary items-center ml-1 rounded-md border"
+              type="submit"
+              disabled={(token && !input.trim()) || isSubmitting}
+            >
+              {isReply ? t('reply') : t('comment')}
+            </button>
+          ) : (
+            <a
+              className="btn btn-primary inline-flex items-center ml-1 rounded-md border hover:no-underline"
+              target="_top"
+              href={loginUrl}
+            >
+              <MarkGithubIcon className="mr-2" fill="currentColor" /> {t('signInWithGitHub')}
+            </a>
+          )}
+        </div>
       </div>
     </form>
   ) : (
